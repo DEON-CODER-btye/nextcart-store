@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer components {
+  .card {
+    @apply max-w-82 w-full rounded-[5px];
+  }
+
+  .values {
+    @apply bg-gray-300 w-full max-w-150 h-full min-h-75 rounded-2xl px-5;
+  }
+}

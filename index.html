@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="output.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-black text-white font-['Poppins']">
+  <nav>
+    <div class="flex bg-gray-200 text-black p-5 items-center justify-between  md:px-20">
+      <h1 class="text-3xl font-extrabold">SHOP.CO</h1>
+      <div class="hidden gap-12 items-center px-6 shrink-0 text-base md:flex ">
+        <a class="whitespace-nowrap" href="">
+          <p>Shop</p>
+        </a>
+        <a class="whitespace-nowrap" href="">
+          <p>On Sale</p>
+        </a>
+        <a class="whitespace-nowrap" href="">
+          <p>New Arrivals</p>
+        </a>
+        <a class="whitespace-nowrap" href="">
+          <p>Brands</p>
+        </a>
+      </div>
+      <div class="relative w-full max-w-[750px] hidden  md:flex">
+        <input class="w-full p-3 pl-12 rounded-2xl text-base bg-gray-300" type="text" placeholder="Search...." />
+        <i class="fa-solid fa-magnifying-glass 
+     absolute left-3 top-1/2 -translate-y-1/2 text-black text-xl">
+        </i>
+      </div>
+      <div class="flex gap-5 text-2xl pl-3">
+        <span class="items-center flex md:hidden">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <i class="fa-solid fa-cart-arrow-down"></i>
+        <i class="fa-solid fa-circle-user"></i>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section id="heroSection">
+      <div class="bg-[#F2F0F1] w-full text-black flex flex-wrap">
+        <div class="px-16 mt-15">
+          <P class="text-6xl font-extrabold">FIND CLOTHES</P>
+          <P class="text-6xl font-extrabold">THAT MATCHES</P>
+          <P class="text-6xl font-extrabold">YOUR STYLE</P>
+          <P class="py-5">Browse through our diverse range of meticulously crafted garments, <br>designed to bring out
+            your individuality
+            and cater to your sense of style.</P>
+          <button class="bg-black text-white px-20 py-3.5 rounded-3xl">Shop Now</button>
+          <div class="flex gap-20 mt-12 text-3xl font-medium">
+            <p>200 +</p>
+            <p>2000 +</p>
+            <p>30,000 +</p>
+          </div>
+          <div class="flex gap-5 text-sm">
+            <span>International Brands</span>
+            <span>High-Quality Products</span>
+            <span>Happy Customers</span>
+          </div>
+        </div>
+        <div class="mx-auto">
+          <img class="w-full max-w-[1200px]" src="images/Rectangle 2.png" alt="">
+        </div>
+      </div>
+      <div class="bg-gray-300 w-full p-9 flex text-black text-3xl justify-between font-semibold px-20 flex-wrap">
+        <p>VERSACE</p>
+        <p>ZARA</p>
+        <p>GUCCI</p>
+        <p>PRADA</p>
+        <p>Calvin klein</p>
+      </div>
+    </section>
+    <section id="productSection">
+      <h1 class="font-extrabold text-center my-20 text-5xl">NEW ARRIVALS</h1>
+      <div class="container flex gap-12 flex-wrap mx-auto justify-center">
+        <template id="cardTemplate">
+          <div>
+            <img class="box bg-gray-300 rounded-[5px] max-w-[500px]" src="" alt="" />
+            <div class="py-3">
+              <p class="title"></p>
+              <i class="fa-solid fa-star text-yellow-300"></i>
+              <i class="fa-solid fa-star text-yellow-300"></i>
+              <i class="fa-solid fa-star text-yellow-300"></i>
+              <i class="fa-solid fa-star text-yellow-300"></i>
+              <span class="rating text-sm"></span>
+              <div class="price text-xl"></div>
+            </div>
+          </div>
+        </template>
+      </div>
+
+      <a href="">
+        <button
+          class="bg-gray-200 border cursor-pointer border-green-400 px-16 py-3 rounded-2xl mx-auto flex text-black">View
+          All</button>
+      </a>
+    </section>
+    <hr class="my-20 text-gray-700">
+    <section id="product-section-two">
+      <h1 class="font-extrabold text-center my-20 text-5xl">TOP SELLING</h1>
+      <div class="containerTwo flex justify-center my-12 px-36 gap-12 flex-wrap mx-auto">
+        <template id="cardTemplate">
+          <div>
+            <img class="box bg-gray-300 rounded-[5px] max-w-[500px]" src="" alt="" />
+          </div>
+          <div class="py-3">
+            <p class="title"></p>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <span class="rating text-sm"></span>
+            <div class="price text-xl"></div>
+          </div>
+        </template>
+      </div>
+      <a href="">
+        <button
+          class="bg-gray-200 border cursor-pointer border-green-400 px-16 py-3 rounded-2xl mx-auto flex text-black">View
+          All</button>
+      </a>
+    </section>
+    <section class="category-card my-20">
+      <div class="bg-gray-200 w-full max-w-[1200px] h-full min-h-[800px] mx-auto rounded-2xl ">
+        <p class="text-5xl text-black font-extrabold text-center pt-12">BROWSE BY DRESS STYLE</p>
+        <div class="p-20  flex gap-6 flex-wrap">
+          <div
+            class="bg-white w-full max-w-[400px] h-full min-h-[300px] rounded-2xl bg-[url('images/men-image.png')] bg-contain bg-no-repeat">
+            <p class="text-black text-4xl p-8">Casual</p>
+          </div>
+          <div
+            class="bg-white w-full max-w-[600px] h-full min-h-[300px] rounded-2xl bg-[url('images/men2.png')] bg-contain bg-no-repeat bg-center">
+            <p class="text-black text-4xl p-8">Formal</p>
+          </div>
+          <div
+            class="bg-white w-full max-w-[600px] h-full min-h-[300px] rounded-2xl bg-[url('images/girl.png')] bg-contain bg-no-repeat">
+            <p class="text-black text-4xl p-8">Party</p>
+          </div>
+          <div
+            class="bg-white w-full max-w-[400px] h-full min-h-[300px] rounded-2xl bg-[url('images/gymmen.png')] bg-contain bg-no-repeat bg-ce">
+            <p class="text-black text-4xl p-8">Gym</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="flex items-center justify-between px-20 py-12">
+        <h1 class="font-extrabold text-5xl">OUR HAPPY CUSTOMERS</h1>
+        <div class="flex gap-5 text-2xl text-gray-300">
+          <i class="fa-solid fa-arrow-left"></i>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="flex gap-8 mx-auto justify-center flex-wrap">
+        <div class="bg-white  w-full max-w-[400px] min-h-[300px] h-full rounded-2xl p-12 ml-16">
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <div class="flex gap-2 py-3">
+            <h3 class="text-black inline">Sarah M.</h3>
+            <img src="images/check (1).png" alt="" class="w-6">
+          </div>
+          <p class="text-black">"I'm blown away by the quality and style of the clothes I received from Shop.co. From
+            casual wear to
+            elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+        </div>
+        <div class="bg-white w-full max-w-[400px] min-h-[300px] h-full rounded-2xl p-12">
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <div class="flex gap-2 py-3">
+            <div class="text-black inline">Sarah M.</div>
+            <img src="images/check (1).png" alt="" class="w-6">
+          </div>
+          <p class="text-black">"I'm blown away by the quality and style of the clothes I received from Shop.co. From
+            casual wear to
+            elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+        </div>
+        <div class="bg-white w-full max-w-[400px] min-h-[300px] h-full rounded-2xl p-12">
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <div class="flex gap-2 py-3">
+            <div class="text-black inline">Sarah M.</div>
+            <img src="images/check (1).png" alt="" class="w-6">
+          </div>
+          <p class="text-black">"I'm blown away by the quality and style of the clothes I received from Shop.co. From
+            casual wear to
+            elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+        </div>
+        <div class="bg-white w-full max-w-[400px] min-h-[300px] h-full rounded-2xl p-12">
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <i class="fa-solid fa-star text-yellow-300"></i>
+          <div class="flex gap-2 py-3">
+            <div class="text-black inline">Sarah M.</div>
+            <img src="images/check (1).png" alt="" class="w-6">
+          </div>
+          <p class="text-black">"I'm blown away by the quality and style of the clothes I received from Shop.co. From
+            casual wear to
+            elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+        </div>
+      </div>
+    </section>
+    <section class="box relative my-52">
+      <div
+        class="bg-gray-300 w-full max-w-[1300px] rounded-2xl h-full min-h-[200px] p-10 mt-16 mx-auto  flex justify-between items-center flex-wrap absolute left-1/2 -translate-x-1/2 bottom-[-70px] z-10">
+        <div>
+          <p class=" text-black text-5xl font-extrabold">STAY UPTO DATE ABOUT</p>
+          <p class="text-black text-5xl font-extrabold">OUR LATEST OFFERS</p>
+        </div>
+        <div class="flex flex-col gap-2 relative">
+          <i class="fa-solid fa-envelope text-gray-500 text-xl absolute top-5 left-5 py-0.5"></i>
+          <input type="text" placeholder="Enter your email address" class="bg-black px-14 py-5 rounded-2xl" />
+          <button class="bg-black px-20 py-5 rounded-2xl">Subscribe Newsletter</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="bg-white w-full h-full min-h-[400px] pt-24">
+      <div class="items-center justify-between px-20 flex-wrap flex">
+        <div class="text-black">
+          <p class="text-5xl font-extrabold py-5">SHOP.CO</p>
+          <p class="text-sm">We have clothes that suits your style and</p>
+          <p class="text-sm"> which you’re proud to wear</p>
+          <p class="text-sm">From women to men.</p>
+          <div class="py-5 flex gap-3">
+            <div class="bg-black rounded-full w-10 h-10 flex items-center justify-center">
+              <i class="fa-brands fa-twitter text-white"></i>
+            </div>
+            <div class="bg-black rounded-full w-10 h-10 flex items-center justify-center">
+              <i class="fa-brands fa-facebook text-white"></i>
+            </div>
+            <div class="bg-black rounded-full w-10 h-10 flex items-center justify-center">
+              <i class="fa-brands fa-instagram text-white"></i>
+            </div>
+            <div class="bg-black rounded-full w-10 h-10 flex items-center justify-center">
+              <i class="fa-brands fa-github text-white"></i>
+            </div>
+          </div>
+        </div>
+        <div class="text-black text-lg space-y-1.5">
+          <p class="font-semibold py-5 text-3xl">COMPANY</p>
+          <p class="font-light">About</p>
+          <p class="font-light">Features</p>
+          <p class="font-light">Works</p>
+          <p class="font-light">Career</p>
+        </div>
+        <div class="text-black text-lg space-y-1.5 ">
+          <p class="font-semibold py-5 text-3xl">HELP</p>
+          <p class="font-light">Customer Support</p>
+          <p class="font-light">Delivery Details</p>
+          <p class="font-light">Terms & Condition</p>
+          <p class="font-light">Privacy Policy</p>
+        </div>
+        <div class="text-black text-lg space-y-1.5">
+          <p class="font-semibold py-5 text-3xl">FAQ</p>
+          <p class="font-light">Account</p>
+          <p class="font-light">Manage Deliveries</p>
+          <p class="font-light">Orders</p>
+          <p class="font-light">Payments</p>
+        </div>
+        <div class="text-black text-lg space-y-1.5">
+          <p class="font-semibold py-5 text-3xl">RESOURCES</p>
+          <p class="font-light">Free</p>
+          <p class="font-light">Develoment Tutorial</p>
+          <p class="font-light">How to - Blog</p>
+          <p class="font-light">Youtube playlist</p>
+        </div>
+        <hr class="text-black w-full my-5">
+      </div>
+      <div class="flex items-center justify-between px-20 pb-20">
+        <p class="text-gray-500">Shop.co © 2000-2023, All Rights Reserved</p>
+        <div class="flex items-center gap-5">
+          <div class="bg-gray-100 h-10 w-16 rounded-[5px] flex justify-center items-center">
+            <img src="svg/Visa.svg" alt="" class="w-10">
+          </div>
+          <div class="bg-gray-100 h-10 w-16 rounded-[5px] flex justify-center items-center">
+            <img src="svg/Mastercard.svg" alt="" class="w-10">
+          </div>
+          <div class="bg-gray-100 h-10 w-16 rounded-[5px] flex justify-center items-center">
+            <img src="svg/Paypal.svg" alt="" class="w-10">
+          </div>
+          <div class="bg-gray-100 h-10 w-16 rounded-[5px] flex justify-center items-center">
+            <img src="svg/ Pay.svg" alt="" class="w-10">
+          </div>
+          <div class="bg-gray-100 h-10 w-16 rounded-[5px] flex justify-center items-center">
+            <img src="svg/G Pay.svg" alt="" class="w-10">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
