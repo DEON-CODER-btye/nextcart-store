@@ -30,11 +30,11 @@ async function apiCall() {
 
     const data = await response.json()
     const data2 = await response2.json()
-    console.log(data);
     const products = data2.products.slice(28, 32);
-    console.log(products);
+    const review = data2.products.slice(1, 7)
     renderCards(container, products)
     UI(data)
+    ProductsReview(review)
   } catch (error) {
     console.log(error);
   }
@@ -55,7 +55,7 @@ function UI(val) {
   price.innerText = `$${Math.floor(val.price)}`
   description.innerText = val.description
   stock.innerText = `Stock(${val.stock})`
-  rating.innerText = `(${Math.floor(val.rating)}k)`
+  rating.innerText = `(${val.rating.toFixed(1)})`
   discount.innerText = `$${Math.floor(discountPrice)}`
 
 }
@@ -98,7 +98,7 @@ number.textContent = count;
 
 plus.addEventListener('click', (e) => {
 
-  if (count >= 2) return;
+  if (count >= 5) return;
   count++;
   number.innerText = count;
 
@@ -110,4 +110,40 @@ mins.addEventListener('click', () => {
   number.innerText = count;
 })
 
-
+function ProductsReview(data) {
+  const reviewContainer = document.querySelector('.reviewContainer')
+  data.forEach((el) => {
+    const reviewDate = `${el.reviews[2].date}`
+    const date = new Date(reviewDate).toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+    console.log(date);
+    const div = document.createElement('div');
+    div.classList.add('reviewClass');
+    div.innerHTML = `
+     <div class="flex items-center justify-between px-5 py-5">
+            <div class="">
+              <i class="fa-solid fa-star text-yellow-300"></i>
+              <i class="fa-solid fa-star text-yellow-300"></i>
+              <i class="fa-solid fa-star text-yellow-300"></i>
+              <i class="fa-solid fa-star text-yellow-300"></i>
+            </div>
+            <div class="flex gap-0.5">
+              <div class="h-2 w-2 rounded-full bg-black"></div>
+              <div class="h-2 w-2 rounded-full bg-black"></div>
+              <div class="h-2 w-2 rounded-full bg-black"></div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h3 class="ratingName flex items-center gap-2 text-2xl font-medium">${el.reviews[0].reviewerName}
+              <img src="images/check (1).png" alt="" class="w-6 h-6">
+            </h3>
+            <p class="ratingDescription">${el.reviews[0].comment}</p>
+            <p class="ratingDate mt-16">Posted on ${date}</p>
+          </div>
+    `
+    reviewContainer.append(div)
+  })
+}

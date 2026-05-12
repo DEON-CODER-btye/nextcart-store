@@ -8,4 +8,8 @@
   .values {
     @apply bg-gray-300 w-full max-w-150 h-full min-h-75 rounded-2xl px-5;
   }
+
+  .reviewClass {
+    @apply bg-gray-300 w-full max-w-150 min-h-75 h-full rounded-2xl p-12 ml-16;
+  }
 }
