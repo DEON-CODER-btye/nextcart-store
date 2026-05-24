@@ -93,21 +93,21 @@ container.addEventListener('click', (e) => {
   }
 })
 
-let count = 0;
-number.textContent = count;
+let itemCount = 0;
+number.textContent = itemCount;
 
 plus.addEventListener('click', (e) => {
 
-  if (count >= 5) return;
-  count++;
-  number.innerText = count;
+  if (itemCount >= 5) return;
+  itemCount++;
+  number.innerText = itemCount;
 
 })
 
 mins.addEventListener('click', () => {
-  if (count <= 0) return;
-  count--;
-  number.innerText = count;
+  if (itemCount <= 0) return;
+  itemCount--;
+  number.innerText = itemCount;
 })
 
 function ProductsReview(data) {
@@ -123,27 +123,74 @@ function ProductsReview(data) {
     const div = document.createElement('div');
     div.classList.add('reviewClass');
     div.innerHTML = `
-     <div class="flex items-center justify-between px-5 py-5">
+    <div class="flex items-center justify-between px-5 py-5">
             <div class="">
-              <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
             </div>
             <div class="flex gap-0.5">
-              <div class="h-2 w-2 rounded-full bg-black"></div>
-              <div class="h-2 w-2 rounded-full bg-black"></div>
+            <div class="h-2 w-2 rounded-full bg-black"></div>
+            <div class="h-2 w-2 rounded-full bg-black"></div>
               <div class="h-2 w-2 rounded-full bg-black"></div>
             </div>
-          </div>
-          <div class="flex flex-col gap-4">
+            </div>
+            <div class="flex flex-col gap-4">
             <h3 class="ratingName flex items-center gap-2 text-2xl font-medium">${el.reviews[0].reviewerName}
-              <img src="images/check (1).png" alt="" class="w-6 h-6">
+            <img src="images/check (1).png" alt="" class="w-6 h-6">
             </h3>
             <p class="ratingDescription">${el.reviews[0].comment}</p>
             <p class="ratingDate mt-16">Posted on ${date}</p>
-          </div>
-    `
+            </div>
+            `
     reviewContainer.append(div)
   })
+}
+
+const cartPop = document.querySelector('.cartPop')
+function addToCart(id) {
+  const cartBtn = document.querySelector('.addBtn');
+  const cartBox = document.querySelector('.cartBox');
+  let cartCount = localStorage.getItem('cartCount')
+  cartBox.textContent = cartCount;
+
+  if (cartCount > 0) {
+    cartBox.classList.remove('hidden')
+  }
+  cartBtn.addEventListener('click', () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (!cart.includes(id)) {
+      cartPopUp()
+      cart.push(id);
+
+      localStorage.setItem('cart', JSON.stringify(cart))
+      cartCount++;
+      localStorage.setItem('cartCount', cartCount);
+      cartBox.textContent = cartCount;
+      cartBox.classList.remove('hidden')
+    } else {
+      cartPopUp();
+      cartPop.textContent = 'Already Added 🛒'
+
+    }
+
+  })
+}
+addToCart(id)
+
+const cartList = document.querySelector('.cartList')
+cartList.addEventListener('click', () => {
+  window.location.href = 'cart.html'
+})
+
+function cartPopUp() {
+  cartPop.classList.remove('hidden')
+  cartPop.classList.add('animation')
+  setTimeout(() => {
+    cartPop.classList.add('remove')
+  }, 1500);
+  setTimeout(() => {
+    cartPop.classList.add('hidden')
+  }, 1700);
 }

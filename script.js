@@ -109,3 +109,18 @@ function review(val) {
   })
 
 }
+
+const carBox = document.querySelector('.cartBox');
+let cartCount = localStorage.getItem('cartCount')
+
+if (cartCount > 0) {
+  carBox.classList.remove('hidden');
+
+}
+
+carBox.textContent = cartCount;
+
+const cartList = document.querySelector('.cartList');
+cartList.addEventListener('click', () => {
+  window.location.href = 'cart.html'
+})

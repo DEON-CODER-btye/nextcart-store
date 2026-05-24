@@ -40,12 +40,21 @@
         <span class="items-center flex md:hidden">
           <i class="fa-solid fa-magnifying-glass"></i>
         </span>
-        <i class="fa-solid fa-cart-arrow-down"></i>
+        <i class="cartList fa-solid fa-cart-arrow-down relative">
+          <span
+            class="cartBox bg-gray-800 text-white rounded-full p-1.5 h-6 flex justify-center items-center w-6 text-[11px] absolute bottom-4 left-5 hidden">0</span>
+        </i>
         <i class="fa-solid fa-circle-user"></i>
       </div>
     </div>
   </nav>
   <main class="max-w-[1400px] w-full mx-auto">
+    <div class="relative flex justify-center">
+      <div
+        class="cartPop w-1/6  text-xl rounded-[5px] text-center flex justify-center items-center h-12  bg-gray-900 text-orange-400 font-extralight absolute top-[700px] hidden">
+        ITEM
+        ADDED <i class=" text-blue-500 font-extralight text-base  pl-3 fa-solid fa-cart-arrow-down"></i></div>
+    </div>
     <section class="top">
       <div class="p-10 text-lg">
         <a href="">Home ></a>
@@ -108,7 +117,7 @@
             <div class="number text-2xl font-light"></div>
             <p class="plus text-3xl font-semibold">+</p>
           </div>
-          <button class="bg-black text-white px-32 rounded-3xl py-4">Add to Cart</button>
+          <button class="addBtn bg-black text-white px-32 rounded-3xl py-4 cursor-pointer">Add to Cart</button>
         </div>
 
       </div>
@@ -177,6 +186,7 @@
         </div>
       </div>
     </section>
+
   </main>
   <footer>
     <div class="bg-white w-full h-full min-h-[400px] pt-24">
