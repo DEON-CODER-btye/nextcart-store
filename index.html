@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>SHOP.CO</title>
   <link rel="stylesheet" href="output.css">
   <link
     href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
@@ -15,7 +15,7 @@
 <body class="bg-black text-white font-['Poppins']">
   <nav>
     <div class="flex bg-gray-200 text-black p-5 items-center justify-between  md:px-20">
-      <h1 class="text-3xl font-extrabold">SHOP.CO</h1>
+      <h1 class="md:text-3xl text-base font-extrabold">SHOP.CO</h1>
       <div class="hidden gap-12 items-center px-6 shrink-0 text-base md:flex ">
         <a class="whitespace-nowrap" href="">
           <p>Shop</p>
@@ -30,51 +30,53 @@
           <p>Brands</p>
         </a>
       </div>
-      <div class="relative w-full max-w-[750px] hidden  md:flex">
-        <input class="w-full p-3 pl-12 rounded-2xl text-base bg-gray-300" type="text" placeholder="Search...." />
+      <div class="relative w-full max-w-[750px] hidden  lg:flex">
+        <input class="search w-full p-3 pl-12 rounded-2xl text-base bg-gray-300" type="text" placeholder="Search...." />
         <i class="fa-solid fa-magnifying-glass 
      absolute left-3 top-1/2 -translate-y-1/2 text-black text-xl">
         </i>
       </div>
       <div class="flex gap-5 text-2xl pl-3">
         <span class="items-center flex md:hidden">
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass lg:text-2xl text-sm"></i>
         </span>
-        <i class="cartList fa-solid fa-cart-arrow-down relative">
+        <i class="cartList fa-solid fa-cart-arrow-down relative lg:text-2xl text-xl">
           <span
-            class="cartBox bg-gray-800 text-white rounded-full p-1.5 h-6 flex justify-center items-center w-6 text-[11px] absolute bottom-4 left-5 hidden">0</span>
+            class="cartBox bg-gray-800 text-white rounded-full p-1.5 md:h-6 h-4 flex justify-center items-center md:w-6 w-4 md:text-[11px] absolute bottom-4 left-5 text-[9px] hidden">0</span>
         </i>
-        <i class="fa-solid fa-circle-user"></i>
+        <i class="fa-solid fa-circle-user lg:text-2xl text-base"></i>
       </div>
     </div>
   </nav>
   <main>
     <section id="heroSection">
-      <div class="bg-[#F2F0F1] w-full text-black flex flex-wrap">
-        <div class="px-16 mt-15">
-          <P class="text-6xl font-extrabold">FIND CLOTHES</P>
-          <P class="text-6xl font-extrabold">THAT MATCHES</P>
-          <P class="text-6xl font-extrabold">YOUR STYLE</P>
-          <P class="py-5">Browse through our diverse range of meticulously crafted garments, <br>designed to bring out
+      <div class=" bg-[#F2F0F1] text-black flex flex-wrap mx-auto justify-center">
+        <div class="mt-15 md:w-auto w-full">
+          <P class="md:text-6xl text-3xl font-extrabold">FIND CLOTHES</P>
+          <P class="md:text-6xl text-3xl font-extrabold">THAT MATCHES</P>
+          <P class="md:text-6xl text-3xl font-extrabold">YOUR STYLE</P>
+          <P class="py-5">Browse through our diverse range of meticulously crafted garments, <br>designed to bring
+            out
             your individuality
             and cater to your sense of style.</P>
           <button class="bg-black text-white px-20 py-3.5 rounded-3xl">Shop Now</button>
-          <div class="flex gap-20 mt-12 text-3xl font-medium">
+          <div class="flex gap-20 mt-12 md:text-3xl text-sm font-medium ">
             <p>200 +</p>
             <p>2000 +</p>
             <p>30,000 +</p>
           </div>
-          <div class="flex gap-5 text-sm">
+          <div class="flex gap-5 md:text-sm text-[12px]">
             <span>International Brands</span>
             <span>High-Quality Products</span>
             <span>Happy Customers</span>
           </div>
         </div>
-        <div class="mx-auto">
-          <img class="w-full max-w-[1200px]" src="images/Rectangle 2.png" alt="">
+        <div class="">
+          <img class="w-full md:max-w-[1200px] max-w-[600px]" src="images/Rectangle 2.png" alt="">
         </div>
       </div>
-      <div class="bg-gray-300 w-full p-9 flex text-black text-3xl justify-between font-semibold px-20 flex-wrap">
+      <div
+        class="bg-gray-300 w-full p-9 flex text-black md:text-3xl text-2xl gap-0.5 justify-between font-semibold px-20 flex-wrap">
         <p>VERSACE</p>
         <p>ZARA</p>
         <p>GUCCI</p>
@@ -132,60 +134,61 @@
           All</button>
       </a>
     </section>
-    <section class="category-card my-20">
-      <div class="bg-gray-200 w-full max-w-[1200px] h-full min-h-[800px] mx-auto rounded-2xl ">
-        <p class="text-5xl text-black font-extrabold text-center pt-12">BROWSE BY DRESS STYLE</p>
+    <section class="category-card my-20 flex justify-center  mx-3">
+      <div class="bg-gray-200 w-full max-w-[1200px] h-full min-h-[800px] mx-auto rounded-2xl justify-center">
+        <p class="md:text-5xl text-2xl text-black font-extrabold text-center pt-12">BROWSE BY DRESS STYLE</p>
         <div class="p-20  flex gap-6 flex-wrap">
           <div
-            class="bg-white w-full max-w-[400px] h-full min-h-[300px] rounded-2xl bg-[url('images/men-image.png')] bg-contain bg-no-repeat">
+            class="bg-white md:w-full md:max-w-[400px] h-full md:min-h-[300px]  rounded-2xl bg-[url('images/men-image.png')] bg-contain bg-no-repeat">
             <p class="text-black text-4xl p-8">Casual</p>
           </div>
           <div
-            class="bg-white w-full max-w-[600px] h-full min-h-[300px] rounded-2xl bg-[url('images/men2.png')] bg-contain bg-no-repeat bg-center">
+            class="bg-white md:w-full md:max-w-[600px] h-full md:min-h-[300px] max-w-[400px]  rounded-2xl bg-[url('images/men2.png')] bg-contain bg-no-repeat ">
             <p class="text-black text-4xl p-8">Formal</p>
           </div>
           <div
-            class="bg-white w-full max-w-[600px] h-full min-h-[300px] rounded-2xl bg-[url('images/girl.png')] bg-contain bg-no-repeat">
+            class="bg-white md:w-full md:max-w-[400px] h-full md:min-h-[300px] min-w-[200px] rounded-2xl bg-[url('images/girl.png')] bg-contain bg-no-repeat ">
             <p class="text-black text-4xl p-8">Party</p>
           </div>
           <div
-            class="bg-white w-full max-w-[400px] h-full min-h-[300px] rounded-2xl bg-[url('images/gymmen.png')] bg-contain bg-no-repeat bg-ce">
+            class="bg-white md:w-full md:max-w-[600px] h-full md:min-h-[300px] min-w-[200px] rounded-2xl bg-[url('images/gymmen.png')] bg-contain bg-no-repeat bg-center">
             <p class="text-black text-4xl p-8">Gym</p>
           </div>
         </div>
       </div>
     </section>
     <section class="reviews">
-      <div class="flex items-center justify-between px-20 py-12">
-        <h1 class="font-extrabold text-5xl">OUR HAPPY CUSTOMERS</h1>
-        <div class="flex gap-5 text-2xl text-gray-300">
+      <div class="flex items-center justify-between md:px-20 py-12 px-5 ">
+        <h1 class="font-extrabold md:text-5xl text-sm">OUR HAPPY CUSTOMERS</h1>
+        <div class="flex gap-5 text-lg text-gray-300">
           <i class="fa-solid fa-arrow-left"></i>
           <i class="fa-solid fa-arrow-right"></i>
         </div>
       </div>
-      <div class="reviewContainer flex gap-8 mx-auto justify-center flex-wrap">
+      <div class="reviewContainer flex gap-8  flex-wrap mx-auto justify-center">
       </div>
     </section>
     <section class="box relative my-52">
       <div
-        class="bg-gray-300 w-full max-w-[1300px] rounded-2xl h-full min-h-[200px] p-10 mt-16 mx-auto  flex justify-between items-center flex-wrap absolute left-1/2 -translate-x-1/2 bottom-[-70px] z-10">
+        class="bg-gray-300 w-full max-w-[1200px] rounded-2xl h-full md:min-h-[200px] min-h-[260px] p-10 mt-16 mx-auto  flex justify-between items-center flex-wrap absolute left-1/2 -translate-x-1/2 bottom-[-70px] z-10">
         <div>
-          <p class=" text-black text-5xl font-extrabold">STAY UPTO DATE ABOUT</p>
-          <p class="text-black text-5xl font-extrabold">OUR LATEST OFFERS</p>
+          <p class=" text-black md:text-5xl text-2xl font-extrabold">STAY UPTO DATE ABOUT</p>
+          <p class="text-black md:text-5xl text-2xl font-extrabold">OUR LATEST OFFERS</p>
         </div>
         <div class="flex flex-col gap-2 relative">
-          <i class="fa-solid fa-envelope text-gray-500 text-xl absolute top-5 left-5 py-0.5"></i>
-          <input type="text" placeholder="Enter your email address" class="bg-black px-14 py-5 rounded-2xl" />
-          <button class="bg-black px-20 py-5 rounded-2xl">Subscribe Newsletter</button>
+          <i class="fa-solid fa-envelope text-gray-500 text-sm absolute top-5 left-5 py-0.5"></i>
+          <input type="text" placeholder="Enter your email address"
+            class="bg-black px-4 py-5 rounded-2xl pl-12  text-sm" />
+          <button class="bg-black px-20 py-5 rounded-2xl text-sm ">Subscribe Newsletter</button>
         </div>
       </div>
     </section>
   </main>
   <footer>
-    <div class="bg-white w-full h-full min-h-[400px] pt-24">
+    <div class="bg-white w-full h-full min-h-[400px] pt-34 mx-auto">
       <div class="items-center justify-between px-20 flex-wrap flex">
         <div class="text-black">
-          <p class="text-5xl font-extrabold py-5">SHOP.CO</p>
+          <p class="md:text-5xl text-2xl font-extrabold py-5">SHOP.CO</p>
           <p class="text-sm">We have clothes that suits your style and</p>
           <p class="text-sm"> which you’re proud to wear</p>
           <p class="text-sm">From women to men.</p>
@@ -234,9 +237,9 @@
         </div>
         <hr class="text-black w-full my-5">
       </div>
-      <div class="flex items-center justify-between px-20 pb-20">
+      <div class="flex items-center justify-between px-20 pb-20 flex-wrap">
         <p class="text-gray-500">Shop.co © 2000-2023, All Rights Reserved</p>
-        <div class="flex items-center gap-5">
+        <div class="flex items-center gap-5 flex-wrap">
           <div class="bg-gray-100 h-10 w-16 rounded-[5px] flex justify-center items-center">
             <img src="svg/Visa.svg" alt="" class="w-10">
           </div>

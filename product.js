@@ -17,7 +17,8 @@ const plus = document.querySelector('.plus')
 const mins = document.querySelector('.mins')
 const number = document.querySelector('.number')
 const id = parmas.get('id');
-console.log(id);
+
+// console.log(id);
 
 async function apiCall() {
   try {
@@ -88,7 +89,7 @@ function createCard(data) {
 container.addEventListener('click', (e) => {
   if (e.target.tagName === 'IMG') {
     const id = e.target.dataset.id;
-    console.log(id);
+    // console.log(id);
     window.location.href = `product.html?id=${id}`;
   }
 })
@@ -119,7 +120,7 @@ function ProductsReview(data) {
       day: "numeric",
       year: "numeric",
     });
-    console.log(date);
+    // console.log(date);
     const div = document.createElement('div');
     div.classList.add('reviewClass');
     div.innerHTML = `
@@ -152,23 +153,20 @@ const cartPop = document.querySelector('.cartPop')
 function addToCart(id) {
   const cartBtn = document.querySelector('.addBtn');
   const cartBox = document.querySelector('.cartBox');
-  let cartCount = localStorage.getItem('cartCount')
-  cartBox.textContent = cartCount;
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cartBox.textContent = cart.length;
 
-  if (cartCount > 0) {
+  if (cart.length > 0) {
     cartBox.classList.remove('hidden')
   }
   cartBtn.addEventListener('click', () => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     if (!cart.includes(id)) {
-      cartPopUp()
       cart.push(id);
-
       localStorage.setItem('cart', JSON.stringify(cart))
-      cartCount++;
-      localStorage.setItem('cartCount', cartCount);
-      cartBox.textContent = cartCount;
+      cartBox.textContent = cart.length;
       cartBox.classList.remove('hidden')
+      cartPopUp()
     } else {
       cartPopUp();
       cartPop.textContent = 'Already Added 🛒'
@@ -194,3 +192,23 @@ function cartPopUp() {
     cartPop.classList.add('hidden')
   }, 1700);
 }
+
+function selectSize() {
+  const sizeBtn = document.querySelectorAll('.sizeBtn');
+
+  sizeBtn.forEach((el) => {
+    el.addEventListener('click', () => {
+
+      sizeBtn.forEach((btn) => {
+        btn.classList.remove('bg-orange-500');
+        btn.classList.add('bg-gray-200');
+      });
+
+      el.classList.remove('bg-gray-200');
+      el.classList.add('bg-orange-500');
+
+    });
+  });
+}
+
+selectSize();

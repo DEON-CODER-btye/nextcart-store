@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="style.css">
   <link
     href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
     rel="stylesheet" />
@@ -48,7 +49,7 @@
       </div>
     </div>
   </nav>
-  <main class="max-w-[1400px] w-full mx-auto">
+  <main class="max-w-[1400px] w-full mx-auto px-2">
     <div class="relative flex justify-center">
       <div
         class="cartPop w-1/6  text-xl rounded-[5px] text-center flex justify-center items-center h-12  bg-gray-900 text-orange-400 font-extralight absolute top-[700px] hidden">
@@ -63,20 +64,20 @@
         <a href="">T-shirt</a>
       </div>
     </section>
-    <section class="product flex gap-9 justify-center">
-      <div class="space-x-5 space-y-5">
+    <section class="product flex gap-9 justify-center xl:flex-nowrap flex-wrap mx-auto">
+      <div class="space-x-5 space-y-5 xl:block flex">
         <div class="bg-gray-50 w-full max-w-[300px] rounded-2xl flex justify-center items-center">
-          <img src="images/T-shirt.png" alt="" class="image">
+          <img src="" alt="" class="image">
         </div>
         <div class="bg-gray-50 w-full max-w-[300px] rounded-2xl flex justify-center items-center">
-          <img src="images/T-shirt.png" alt="" class="image">
+          <img src="" alt="" class="image">
         </div>
         <div class="bg-gray-50 w-full max-w-[300px] rounded-2xl flex justify-center items-center">
-          <img src="images/T-shirt.png" alt="" class="image">
+          <img src="" alt="" class="image">
         </div>
       </div>
       <div class="bg-gray-50 w-full max-w-[400px]  rounded-2xl flex justify-center items-center">
-        <img src="images/image 7.png" alt="" class="image rounded-2xl  ">
+        <img src="" alt="" class="image rounded-2xl  ">
       </div>
       <div class="container flex flex-col gap-5">
         <h1 class="title text-black text-5xl font-extrabold"></h1>
@@ -104,48 +105,60 @@
         <hr class="text-gray-200">
         <p>Choose Size</p>
         <div class="flex gap-5">
-          <button class="bg-gray-200  w-24 h-11 rounded-3xl flex items-center justify-center">Small</button>
-          <button class="bg-gray-200  w-24 h-11 rounded-3xl flex items-center justify-center">Medium</button>
-          <button class="bg-gray-200  w-24 h-11 rounded-3xl flex items-center justify-center">Large</button>
-          <button class="bg-gray-200  w-24 h-11 rounded-3xl flex items-center justify-center">X Large</button>
+          <button
+            class="sizeBtn bg-gray-200  w-24 h-11 rounded-3xl flex items-center justify-center cursor-pointer">Small</button>
+          <button class="sizeBtn
+          bg-gray-200  w-24 h-11 rounded-3xl flex items-center justify-center cursor-pointer">Medium</button>
+          <button class="sizeBtn
+          bg-gray-200  w-24 h-11 rounded-3xl flex items-center justify-center cursor-pointer">Large</button>
+          <button class="sizeBtn
+          bg-gray-200  w-24 h-11 rounded-3xl flex items-center justify-center cursor-pointer">X Large</button>
 
         </div>
         <hr class="text-gray-200">
-        <div class="flex gap-5">
-          <div class="bg-gray-300 w-48 h-14 rounded-3xl flex items-center justify-between px-7">
-            <div class="mins text-4xl font-semibold">-</div>
+        <div class="flex gap-5 justify-center md:justify-start">
+          <div class="bg-gray-300 md:w-48 h-14 w-40 rounded-3xl flex items-center justify-between px-7">
+            <div class="mins text-4xl font-semibold cursor-pointer">-</div>
             <div class="number text-2xl font-light"></div>
-            <p class="plus text-3xl font-semibold">+</p>
+            <p class="plus text-3xl font-semibold cursor-pointer">+</p>
           </div>
-          <button class="addBtn bg-black text-white px-32 rounded-3xl py-4 cursor-pointer">Add to Cart</button>
+          <button
+            class="addBtn bg-black text-white md:px-32 px-10 rounded-3xl py-4 cursor-pointer md:text-base text-[11px]">Add
+            to
+            Cart</button>
         </div>
 
       </div>
     </section>
     <section class="rating">
-      <div class="flex  pt-20 text-3xl justify-center">
+      <div class="flex  pt-20 md:text-3xl md:flex-nowrap justify-center flex-wrap text-sm gap-5 mx-auto ">
         <h3 class="text-center">Product Details
-          <hr class="w-[500px] text-gray-300 my-5">
+          <hr class="xl:w-[500px] text-gray-300 my-5 w-32">
         </h3>
         <h3 class="text-center">Rating & Reviews
-          <hr class="w-[500px] my-5">
+          <hr class="xl:w-[500px] my-5  w-32">
         </h3>
         <h3 class="text-center">Product Details
-          <hr class="w-[500px] text-gray-300 my-5">
+          <hr class="xl:w-[500px] text-gray-300 my-5 w-32">
         </h3>
       </div>
       <div class="flex items-center justify-between mx-auto">
-        <h3 class="text-2xl font-bold">All Reviews
+        <h3 class="md:text-2xl text-sm font-bold">All Reviews
           <span class="font-light">(451)</span>
         </h3>
-        <div class="flex gap-5 items-center py-2">
+        <div class="flex gap-4 items-center py-2 px-2">
           <div class="bg-gray-300 w-12 h-12 rounded-full flex justify-center items-center">
             <img src="svg/Frame.svg" alt="" class="text-white">
           </div>
-          <div class="bg-gray-300 w-36 h-14 flex items-center justify-center rounded-4xl font-medium">Latest
+          <div
+            class="bg-gray-300 md:w-36 h-14 w-16 flex items-center justify-center rounded-4xl font-medium text-[11px]">
+            Latest
             <i class="fa-solid fa-angle-down"></i>
           </div>
-          <div class="bg-black text-white w-56 h-14 flex items-center justify-center rounded-4xl">Write a Review</div>
+          <div class="bg-black text-white md:w-56 h-14 w-24  flex items-center justify-center rounded-4xl text-[11px]">
+            Write
+            a
+            Review</div>
         </div>
       </div>
       <div class="reviewContainer flex mt-12 gap-12 flex-wrap justify-center">
@@ -174,25 +187,26 @@
     </section>
     <section class="box relative my-52 text-white">
       <div
-        class="bg-gray-300 w-full max-w-[1300px] rounded-2xl h-full min-h-[200px] p-10 mt-16 mx-auto  flex justify-between items-center flex-wrap absolute left-1/2 -translate-x-1/2 bottom-[-70px] z-10">
+        class="bg-gray-300 w-full max-w-[1200px] rounded-2xl h-full md:min-h-[200px] min-h-[260px] p-10 mt-16 mx-auto  flex justify-between items-center flex-wrap absolute left-1/2 -translate-x-1/2 bottom-[-70px] z-10">
         <div>
-          <p class=" text-black text-5xl font-extrabold">STAY UPTO DATE ABOUT</p>
-          <p class="text-black text-5xl font-extrabold">OUR LATEST OFFERS</p>
+          <p class=" text-black lg:text-5xl text-2xl font-extrabold">STAY UPTO DATE ABOUT</p>
+          <p class="text-black lg:text-5xl text-2xl font-extrabold">OUR LATEST OFFERS</p>
         </div>
         <div class="flex flex-col gap-2 relative">
-          <i class="fa-solid fa-envelope text-gray-500 text-xl absolute top-5 left-5 py-0.5"></i>
-          <input type="text" placeholder="Enter your email address" class="bg-black px-14 py-5 rounded-2xl" />
-          <button class="bg-black px-20 py-5 rounded-2xl">Subscribe Newsletter</button>
+          <i class="fa-solid fa-envelope text-gray-500 text-sm absolute top-5 left-5 py-0.5"></i>
+          <input type="text" placeholder="Enter your email address"
+            class="bg-black px-4 py-5 rounded-2xl pl-12  text-sm" />
+          <button class="bg-black px-20 py-5 rounded-2xl text-sm ">Subscribe Newsletter</button>
         </div>
       </div>
     </section>
 
   </main>
   <footer>
-    <div class="bg-white w-full h-full min-h-[400px] pt-24">
+    <div class="bg-white w-full h-full min-h-[400px] pt-34 mx-auto">
       <div class="items-center justify-between px-20 flex-wrap flex">
         <div class="text-black">
-          <p class="text-5xl font-extrabold py-5">SHOP.CO</p>
+          <p class="md:text-5xl text-2xl font-extrabold py-5">SHOP.CO</p>
           <p class="text-sm">We have clothes that suits your style and</p>
           <p class="text-sm"> which you’re proud to wear</p>
           <p class="text-sm">From women to men.</p>
@@ -241,9 +255,9 @@
         </div>
         <hr class="text-black w-full my-5">
       </div>
-      <div class="flex items-center justify-between px-20 pb-20">
+      <div class="flex items-center justify-between px-20 pb-20 flex-wrap">
         <p class="text-gray-500">Shop.co © 2000-2023, All Rights Reserved</p>
-        <div class="flex items-center gap-5">
+        <div class="flex items-center gap-5 flex-wrap">
           <div class="bg-gray-100 h-10 w-16 rounded-[5px] flex justify-center items-center">
             <img src="svg/Visa.svg" alt="" class="w-10">
           </div>

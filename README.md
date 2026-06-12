@@ -1,50 +1,48 @@
 # NextCart Store
 
-Modern ecommerce frontend project built using JavaScript, Tailwind CSS, and API integration.
+A responsive e-commerce website built for JavaScript practice and learning purposes.
 
-## 🚀 Features
+## About
 
-- Dynamic product rendering using API
-- Product details page
-- URL parameter based routing
-- Related products section
-- Dynamic reviews system
-- Responsive UI
-- Discount price calculation
-- Star rating rendering
-- Tailwind CSS styling
+This website was created to practice:
 
-## 🛠️ Tech Stack
+- DOM Manipulation
+- API Fetching
+- URL Parameters
+- Local Storage
+- Event Handling
+- Responsive Design
+- Dynamic Rendering
+
+## Pages
+
+### Home Page
+
+- Display products from API
+- Search products
+- View product listings
+
+### Product Page
+
+- View product details
+- Select quantity
+- Select size
+- Add product to cart
+- View customer reviews
+
+### Cart Page
+
+- Display added products
+- Manage cart items using Local Storage
+
+## Technologies Used
 
 - HTML
 - Tailwind CSS
 - JavaScript
 - DummyJSON API
+- Local Storage
 
-## 📦 API Used
+## Learning Goals
 
-https://dummyjson.com/products
-
-## 🎯 Learning Goals
-
-This project was created to improve:
-
-- DOM manipulation
-- API handling
-- Dynamic UI rendering
-- Component-based thinking
-- Event delegation
-- Responsive frontend design
-
-## 📸 Project Status
-
-Project is currently under development and more features will be added soon.
-
-## 🔥 Upcoming Features
-
-- Add to cart
-- Search functionality
-- Product filtering
-- Image gallery
-- Local storage cart system
-- Better animations
+This practice website was built to improve frontend development skills and gain hands-on experience with real-world JavaScript concepts.

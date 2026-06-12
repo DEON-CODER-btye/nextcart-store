@@ -1,6 +1,7 @@
 
 const container = document.querySelector('.container');
 const containerTwo = document.querySelector('.containerTwo');
+const search = document.querySelector('.search');
 
 
 async function apiCall() {
@@ -18,10 +19,26 @@ async function apiCall() {
 
 
 
+
     renderCards(container, firstPart)
     renderCards(containerTwo, secondPart)
     review(reviewPart)
 
+    search.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const value = e.target.value.toLowerCase();
+        const filterProduct = data.products.find((p) => {
+          return p.title.toLowerCase().includes(value)
+
+        })
+        if (filterProduct) {
+          window.location.href = `product.html?id=${filterProduct.id}`;
+        } else {
+          alert('Product not found')
+        }
+      }
+
+    })
 
   } catch (error) {
     console.error(error);
@@ -111,14 +128,14 @@ function review(val) {
 }
 
 const carBox = document.querySelector('.cartBox');
-let cartCount = localStorage.getItem('cartCount')
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-if (cartCount > 0) {
+if (cart.length > 0) {
   carBox.classList.remove('hidden');
 
 }
 
-carBox.textContent = cartCount;
+carBox.textContent = cart.length;
 
 const cartList = document.querySelector('.cartList');
 cartList.addEventListener('click', () => {
