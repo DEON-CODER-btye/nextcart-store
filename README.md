@@ -1,3 +1,5 @@
+LIVE LINK - https://tangerine-sprite-7d8b08.netlify.app/
+
 # NextCart Store
 
 A responsive e-commerce website built for JavaScript practice and learning purposes.
